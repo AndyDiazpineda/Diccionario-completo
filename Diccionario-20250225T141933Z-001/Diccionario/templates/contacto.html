@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Mundo Lexical</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/contacto.css') }}">
+</head>
+<body>
+    
+        <header>Contacto</header>
+    
+   
+    <div class="contact-container">
+        <div class="logo-container">
+            <a href="{{ url_for('home') }}">
+                <img src="{{ url_for('static', filename='img/logo.jpeg') }}" alt="Logo de Mundo Lexical">
+            </a>
+        </div>
+        <h2>¡Hablemos!</h2>
+        <p>Si tienes dudas o sugerencias, contáctanos a través de nuestras redes sociales.</p>
+        
+        <div class="contact-item">
+            <a href="https://wa.me/8096194274" target="_blank">
+                <img src="{{ url_for('static', filename='img/whatsapp.png') }}" alt="WhatsApp"> WhatsApp
+            </a>
+        </div>
+        
+        <div class="contact-item">
+            <a href="https://www.instagram.com/mundo_lexical?igsh=NGtibzNjNHd4cGox&utm_source=qr" target="_blank">
+                <img src="{{ url_for('static', filename='img/instagram.png') }}" alt="Instagram"> Instagram
+            </a>
+        </div>
+        <br>
+        <div class="qr-container">
+            <h3>Escanea para seguirnos en Instagram</h3>
+            <img src="{{ url_for('static', filename='img/instagram,mundolexical.jpeg') }}" alt="QR de Instagram">
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Mundo Lexical. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelectorAll(".contact-item a").forEach(item => {
+                item.addEventListener("mouseover", () => {
+                    item.style.backgroundColor = "#333";
+                });
+                item.addEventListener("mouseout", () => {
+                    item.style.backgroundColor = "#ae9cff";
+                });
+            });
+        });
+    </script>
+</body>
+</html>
